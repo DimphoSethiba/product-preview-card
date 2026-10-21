@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: hsl(30, 38%, 92%);
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'Montserrat', Arial;
+      color: hsl(228, 12%, 48%);
+    }
+
+    .product-preview-card {
+      display: grid;
+      grid-template-columns: 350px 350px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-info {
+      background-color: hsl(0, 0%, 100%);
+      padding: 30px;
+    }
+
+    .product {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .product-name {
+      font-size: 40px;
+      font-weight: 700;
+      font-family: 'Fraunces', Arial;
+      color: hsl(212, 21%, 14%);
+      padding-right: 20px;
+      margin-bottom: 30px;
+    }
+
+    .product-description {
+      margin-bottom: 30px;
+      line-height: 25px;
+      padding-right: 45px;
+    }
+
+    .product-prices {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .product-price-sale {
+      display: inline-block;
+      color: hsl(158, 36%, 37%);
+      font-size: 40px;
+      font-weight: 700;
+      font-family: 'Fraunces', Arial;
+    }
+
+    .product-price {
+      display: inline-block;
+      margin-left: 20px;
+      text-decoration: line-through;
+    }
+
+    .add-cart-button img {
+      margin-right: 10px;
+    }
+
+    .add-cart-button {
+      font-size: 18px;
+      color: hsl(0, 0%, 100%);
+      background-color: hsl(158, 36%, 37%);
+      border: none;
+      border-radius: 10px;
+      padding: 15px 86px;
+    }
+
+    .add-cart-button:hover {
+      background-color: hsl(158, 42%, 18%);
+    }
+
+    @media (max-width: 600px) {
+      .product-preview-card {
+        display: grid;
+        grid-template-columns: 350px;
+        
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="product-preview-card">
+    <div class="product-image">
+      <picture>
+        <source
+         media="(max-width: 600px)"
+          srcset="images/image-product-mobile.jpg">
+      <img src="images/image-product-desktop.jpg" alt="product image">
+      </picture>
+    </div>
+    <div class="product-info">
+      <div class="product">Perfume</div>
+
+      <div class="product-name">Gabrielle Essence Eau De Parfum</div>
+
+      <div class="product-description">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.</div>
+
+      <div class="product-prices">
+        <div class="product-price-sale">$149.99</div>
+        <div class="product-price">$169.99</div>
+      </div>
+
+      <div class="cart-button">
+        <button class="add-cart-button"><img src="images/icon-cart.svg" alt="cart icon">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Dimpho Sethiba</a>.
+  </footer>
+</body>
+
+</html>
